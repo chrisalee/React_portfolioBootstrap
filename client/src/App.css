@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap');
+
+/********************************* custom properties *********************************/
+:root {
+    --fw-reg: 300;
+    --fw-bold: 800;
+
+    --clr-light: #ffffff;
+    --clr-dark: #303030;
+    --clr-accent: #d4a816;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+
+body {
+    font-family: 'Antic Didone', serif;
+    font-size: var(--fs-body);
+}
+
+/* ************************************ NAVBAR ************************************** */
+.navbar__logo {
+    max-width: 5rem;
+    border-radius: .25rem;
+}
+
+/* MENU LINKS */
+nav a.nav-link {
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+nav ul li {
+    text-transform: uppercase;
+    
+}
+
+.navbar-nav > li > a {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    color: var(--clr-light) !important;
+    border-top: 0.1875rem solid var(--clr-dark);
+}
+
+.navbar-nav > li > a.active, .navbar-nav > li > a.active:focus {
+    border-top: 0.1875rem solid var(--clr-accent);
+}
+
+.navbar-nav > li > a:hover {
+    border-top: 0.1875rem solid var(--clr-accent);
+}
