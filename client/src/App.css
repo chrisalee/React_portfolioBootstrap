@@ -21,6 +21,10 @@ body {
 }
 
 /* ************************************ NAVBAR ************************************** */
+.navbar {
+    z-index: 10;
+}
+
 .navbar__logo {
     max-width: 5rem;
     border-radius: .25rem;
@@ -50,4 +54,101 @@ nav ul li {
 
 .navbar-nav > li > a:hover {
     border-top: 0.1875rem solid var(--clr-accent);
+}
+
+/* ********************************* HEADER ************************************************** */
+.header-wrapper {
+    position: relative;
+    background-color: var(--clr-dark);
+    background-image: url(./images/chicago.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: luminosity;
+    min-height: 90vh;
+    color: var(--clr-light);
+}
+
+.main-info {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Antic Didone', serif;
+}
+
+.main-info h1 {
+    color: var(--clr-accent);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    position: relative;
+    text-transform: uppercase;
+}
+
+@media(max-width: 768px) {
+    .main-info h1 {
+        font-size: 1.9rem !important;
+    }
+}
+
+.main-info h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 1px;
+    margin: 1rem auto 0.5rem;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.btn-main-offer {
+    background-color: var(--clr-accent);
+    border: 1px solid var(--clr-accent);
+    text-transform: uppercase;
+    border-radius: 0.1875rem;
+    padding: 0.625rem 0.75rem 0.75rem 0.75rem;
+    color: var(--clr-light);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    text-decoration: none;
+    letter-spacing: .25rem;
+    margin-top: 3.5rem;
+    z-index: 10;
+}
+
+.btn-main-offer:hover {
+    border: 1px solid #ff9900;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+/* *************************** typed-text ******************* */
+.typed-text {
+    font-size: var(--fs-h2);
+    color: var(--clr-light);
+}
+
+@media(max-width: 768px) {
+    .typed-text {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* ******************Particles ********************** */
+.tsparticles-canvas-el {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+@media(max-width: 760px) {
+    .particles-canvas {
+        display: none;
+    }
 }
